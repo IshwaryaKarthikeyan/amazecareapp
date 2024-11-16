@@ -1,0 +1,145 @@
+/* src/components/Styles/Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Orbitron:wght@400..900&display=swap');
+
+.navbar {
+    background-color: #e11541 !important; /* Cool Red */
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    z-index: 1000; 
+    height:70px;
+    box-shadow: 0 1px 10px #5a15245e !important;
+}
+
+.navbar div{
+    background-color: var(--cool-red) !important;
+}
+
+.navbar-brand {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-size:24px;
+    color: white !important; /* White text */
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color:rgb(249, 209, 216) !important;
+
+}
+
+/* Styling for the dashboard label (Navbar.Text) */
+.navtext{
+    color: white !important; /* Make the dashboard label text white */
+    font-size: 1.3rem; /* Slightly larger font */
+    margin-left: 20px; /* Space between brand and dashboard text */
+    font-weight: bold;
+}
+
+/* Logout button */
+.navbar .btn-outline-light {
+    border-color: white !important; /* White border */
+    border-width: 2px;
+    color: white !important; /* White text */
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #f8d2d9 !important; /* Light red on hover */
+    color: #c10b33 !important; /* Cool Red */
+    border-color:#c10b33 !important;
+}
+
+.navbar .navbar-collapse {
+    margin-left: auto; /* Align to the right */
+}
+
+/* Navbar links */
+.navbar .navbar-nav .nav-link {
+    color: white !important; /* White text for nav links */
+    margin-right: 15px; /* Space between links */
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #ffb3c1 !important; /* Light red on hover */
+}
+
+/* Optional: Additional styling for the active link */
+.navbar .navbar-nav .nav-link.active {
+    color: #cce7ff !important; /* Baby Blue for active link */
+    border-bottom: 2px solid #cce7ff !important; /* Underline for active link */
+}
+
+.navbar .container{
+    background-color: var(--cool-red) !important;
+}
+
+.role-badge {
+    background-color: #c60731 !important; /* Cool Red */
+    color: #ffffff !important;             /* Dark text color */
+    border-radius: 12px;        /* Rounded corners */
+    padding: 5px 12px;          /* Padding inside the box */
+    box-shadow: inset 0px 0px 5px rgba(127, 17, 17, 0.2) !important; 
+    font-weight: 600;           /* Slightly bold text */
+    font-size: 0.9rem;          /* Adjust the font size */
+    margin-left: 20px;          /* Space between the badge and the brand name */
+    display: inline-block;      /* Keep it inline next to the brand */
+}
+
+/* Body padding to prevent content overlap */
+body {
+    padding-top: 100px; /* Adjust according to the height of your navbar */
+}
+
+/* Theme Toggle Styles */
+.theme-toggle .form-check-input {
+    width: 40px !important;    /* Adjust the width to make it smaller */
+    height: 30px !important;              /* Adjust the height */
+    background-color: #f51e45; /* Red background when toggle is off */
+    border-radius: 10px;       /* Keep it rounded */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    position: relative;        /* Position to manage the inner circle */
+    appearance: none;          /* Remove default browser styling */
+    outline: none;             /* Remove default outline */
+    cursor: pointer;
+    border: 2px solid white;   /* White border when unchecked */
+}
+
+/* Remove the blue border that appears on focus */
+.theme-toggle .form-check-input:focus {
+    outline: none;             /* Disable the focus outline */
+    box-shadow: none;          /* Remove any box shadow that might be applied */
+    border-color: white;       /* Keep the border white on focus */
+}
+
+.theme-toggle .form-check-input::before {
+    content: '';
+    position: absolute;
+    width: 20px;               /* Diameter of the toggle circle */
+    height: 20px;
+    background-color: white;   /* White inner circle when toggle is off */
+    border-radius: 50%;        /* Make the circle round */
+    top: 2.5px;                  /* Center it inside the toggle */
+    left: 3px;
+    transition: left 0.1s ease, background-color 0.1s ease; /* Smooth transition for movement */
+}
+
+.theme-toggle .form-check-input:checked {
+    background-color: #1b1a1f; /* Dark background when checked */
+    border-color: white;       /* Ensure the border remains white when checked */
+}
+
+.theme-toggle .form-check-input:checked::before {
+    left: 13px;                /* Moves the toggle to the right when checked */
+    background-color: white;   /* Inner circle remains white */
+}
+
+.theme-toggle .form-check-label {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 15px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+}
+

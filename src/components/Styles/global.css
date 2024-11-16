@@ -1,0 +1,335 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    line-height: 1.3;
+    font-size: 16px;
+}
+
+body::after {
+    content: "";
+    background-image: url('../../Images/background.jpg'); /* Replace with actual path */
+    background-size: 400px;
+    background-position: center;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.dark-theme {
+    background-color: #232323; /* Solid dark background color */
+    color: #e0e0e0;
+}
+
+body.dark-theme::after {
+    filter: invert(1);
+    opacity: 0.3;
+}
+
+/* Primary Colors */
+:root {
+    --cool-red: #e11541;
+    --light-red: #ffb3c1;
+    --purple: #7c5ce7;
+    --white: #ffffff;
+    --baby-blue: #cfccff;
+}
+
+.dark-theme ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cool-red);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.home-title {
+    color: var(--cool-red);
+    font-style: oblique;
+    font-size: 40px;
+    transition: background-position 1s ease-in-out;
+    text-shadow: 0 0 2px #cfccff;
+}
+
+/* Navbar */
+.custom-navbar {
+    position: fixed;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Global Links */
+a {
+    color: var(--cool-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--light-red);
+}
+
+.dark-theme a {
+    color: var(--baby-blue);
+}
+
+.dark-theme a:hover {
+    color: var(--light-red);
+}
+
+/* Buttons */
+button {
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: var(--cool-red);
+    color: var(--white);
+    border-color: var(--cool-red);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:disabled {
+    background-color: var(--cool-red);
+    color: var(--white);
+    border-color: var(--cool-red);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #c60731;
+    box-shadow: inset 0px 0px 3px rgba(127, 17, 17, 0.667);
+    border-color: var(--light-red);
+}
+
+.btn-danger {
+    background-color: var(--purple) !important;
+    color: white !important;
+    border-color: var(--purple);
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme .btn-outline-light {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+
+.dark-theme .btn-outline-light:hover {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+    width: 400px !important;
+    height: 40px !important;
+    padding: 5px !important;
+    font-size: 14px;
+    line-height: 1.2;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px !important;
+    width: 200px !important;
+    resize: none;
+}
+
+/* Dark Theme Form Elements */
+.dark-theme input, 
+.dark-theme textarea, 
+.dark-theme select {
+    background-color: #444444;
+    color: #e0e0e0 !important;
+    -webkit-text-fill-color: #e0e0e0 !important;
+    border-color: #555555;
+}
+
+.dark-theme input::placeholder, 
+.dark-theme textarea::placeholder,
+.dark-theme select::placeholder {
+    color: #6c6b6b;
+}
+
+/* Focus Styles for Form Elements */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.dark-theme input:focus, 
+.dark-theme textarea:focus, 
+.dark-theme select:focus {
+    background-color: #555555 !important; /* Darker background on focus */
+    color: #e0e0e0 !important; /* Light text color */
+    border-color: #888888;
+    outline: none;
+}
+
+.dark-theme input:active, 
+.dark-theme textarea:active, 
+.dark-theme select:active {
+    background-color: #555555 !important; /* Darker background on focus */
+    color: #e0e0e0 !important; /* Light text color */
+    border-color: #888888;
+    outline: none;
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 4px;
+}
+
+.dark-theme .alert {
+    background-color: #444444;
+    color: #e0e0e0;
+    border-color: #555555;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.dark-theme .container {
+    color: #e0e0e0;
+}
+
+/* Card */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffffff !important;
+}
+
+.dark-theme .card {
+    background-color: #3e3e3e !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark-theme .card div {
+    background-color: #3e3e3e !important;
+    border-radius: 8px;
+}
+
+/* Role Badge */
+.role-badge {
+    color: var(--cool-red);
+    background-color: #e0e0e0;
+}
+
+.modal {
+    color: #333;
+    border-radius: px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.dark-theme .modal div {
+    background-color: #3b3b3b;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-header h5,
+.modal-footer {
+    color: #333;
+}
+
+.modal-close {
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dark Theme for Modals */
+.dark-theme .modal {
+    color: #e0e0e0;            /* Light text color */
+    border: 1px solid #444444; /* Border color for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for dark mode */
+}
+
+.dark-theme .modal-header,
+.dark-theme .modal-footer {
+    background-color: #444444; /* Darker background for header/footer */
+    border-bottom: 1px solid #555555; /* Darker border for header/footer */
+}
+
+.dark-theme .modal-header h5,
+.dark-theme .modal-footer {
+    color: #e0e0e0;
+}
+
+.dark-theme .modal-close {
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.dark-theme .modal-close:hover {
+    color: var(--light-red); /* Optional hover color */
+}
+
+/* Modal Button Styles */
+.modal .btn {
+    margin-top: 10px;
+}
+
+.dark-theme .modal .btn-primary {
+    background-color: var(--cool-red);
+    color: var(--white);
+    border-color: var(--cool-red);
+}
+
+.dark-theme .modal .btn-primary:hover {
+    background-color: #c60731;
+    border-color: #c60731;
+    color: #ffffff;
+}
+
+.dark-theme .modal .btn-secondary {
+    background-color: #555555;
+    color: #e0e0e0;
+    border-color: #666666;
+}
+
+.dark-theme .modal .btn-secondary:hover {
+    background-color: #666666;
+    color: #ffffff;
+    border-color: #777777;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    input,
+    textarea {
+        width: 150px !important;
+        height: 25px !important;
+        font-size: 12px;
+    }
+}

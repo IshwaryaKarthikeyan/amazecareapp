@@ -1,0 +1,46 @@
+.hero-section {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* To ensure the pseudo-element stays within bounds */
+    background-size:auto; /* Make sure the background image covers the whole section */
+    background-position: center; /* Center the background image */
+    height: 250px;
+}
+
+.overlay {
+    position: relative; /* Ensure the content stays above the background image */
+    border-radius: 10px;
+}
+
+.hero-section p {
+    color: #1e0f0f;
+    font-size: 18px;
+}
+
+.dark-theme .hero-section p {
+    color: #ededed;
+    font-size: 18px;
+}
+.hero-section .btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .home-title {
+        font-size: 30px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+}
+
+.button-group {
+    margin-bottom: 10rem; /* Adjust as needed */
+}

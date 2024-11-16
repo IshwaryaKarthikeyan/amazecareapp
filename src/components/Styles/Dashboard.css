@@ -1,0 +1,109 @@
+/* Sidebar Styles */
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--cool-red) !important;
+    color: white !important;
+    height: 100vh;
+    position: fixed;
+    top: 70px; /* Adjust sidebar to start below the navbar */
+    width: 150px;
+    padding-top: 20px; /* Smaller padding for sidebar content */
+    box-shadow: 1px 0px 5px #5a15245e,
+    inset -2px 0px 5px #f24167e8;
+}
+
+.sidebar div{
+    background-color: var(--cool-red) !important;
+}
+
+
+/* Sidebar Nav Link Styles */
+.sidebar .nav-link {
+    color: white !important; /* Override Bootstrap link color */
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: block;
+    text-decoration: none; /* Ensure no underline on links */
+}
+
+.sidebar .nav-link:hover {
+    background-color: #c60731 !important;
+    box-shadow: inset 0px 0px 3px rgba(127, 17, 17, 0.667);
+    border-radius: 4px;
+}
+
+/* Active and Hover States */
+.sidebar .nav-link:active{
+    background-color: #aa0529;
+    box-shadow: inset 0px 0px 3px rgba(127, 17, 17, 0.667);
+    border-radius: 4px;
+}
+/* Override Visited Link Color */
+.sidebar .nav-link:visited {
+    color: white !important; /* Ensure visited links stay white */
+}
+
+/* Content Area Styles */
+.content-box {
+    margin-left: 400px;
+    padding-top: 100px;
+    width:fit-content;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.dark-theme .content-box {
+    margin-left: 400px;
+    padding-top: 100px;
+    width:fit-content;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.269);
+    border-radius: 8px;
+    border: 1px solid #323232;
+}
+
+.dark-theme .content-box div{
+    background-color: #333;
+}
+
+
+.btn-primary {
+    background-color: var(--cool-red);
+    color: var(--white);
+    border-color: var(--cool-red);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary .btn-primary:disabled {
+    background-color: var(--cool-red);
+    color: var(--white);
+    border-color: var(--cool-red);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #c60731;
+    box-shadow: inset 0px 0px 3px rgba(127, 17, 17, 0.667);
+    transition-timing-function: ease;
+    border-color: var(--light-red);
+    color: var(--white);
+}
+
+
+.btn-danger {
+    background-color: var(--purple) !important;
+    color: white !important;
+    border-color: var(--purple);
+    width:100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn btn-danger, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--light-red);
+    border-color: var(--light-red);
+    color: var(--white);
+}
